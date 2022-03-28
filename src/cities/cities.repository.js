@@ -2,7 +2,7 @@ const axios = require('axios');
 const {NotFoundError} = require('../middleware/httpError')
 
 async function getCityDataByZipCode(zipCode){
-    console.log('before axios')
+    
     try{
         const result = await axios.get(`https://api.zippopotam.us/us/${zipCode}`);
         const country = result.data.country;
@@ -15,7 +15,7 @@ async function getCityDataByZipCode(zipCode){
         return formattedData;
     }
     catch(err) {
-        console.log('dry')
+        
         throw new NotFoundError('No cities found!');
     }
 }

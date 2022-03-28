@@ -7,6 +7,6 @@ const errorHandler = require('./src/middleware/error-handler');
 app.use(router);
 app.use(errorHandler);
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log(`Example app listening on port`)
 })
